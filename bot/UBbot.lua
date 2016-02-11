@@ -246,11 +246,16 @@ function create_config( )
     sudo_users = {142314165},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[
-https://github.com/BH-YAGHI/NOD32-BOT.git
-
-channel : @Nod32team
-sodu : @behrooZyaghi
+    about_text = [[ 
+    UB Helper1 	V3 😎👊
+    😸An advance Administration bot based on nod32😸
+    
+ 
+    Sudo & Manager 👑@CIA_EMC_besick👑 
+     
+    Our channel : 🔱@UB_CH🔱
+    
+    http://8pic.ir/images/q7yotypchmj2lqunooku.jpg
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -317,107 +322,107 @@ This command will send text to [group_id]
 
 ]],
     help_text = [[
-NOD32 Commands list :
+UB Helper1 Commands list :
  
-1-banhammer list ^
+1-banhammer list
  
 !kick [username|id]
-(کیک کردن شخص (حتی با ریپلی)
+(برای حذف کردن شخص از )
 
 !ban [ username|id]
-(بن کردن افراد (حتی با ریپلی)
+(محروم کردن شخص از گزوه)
 
 !unban [id]
-(انبن کردن افراد (همراه ایدی)
+(حذف مسدودیت شخص محروم شده)
 
 !kickme
-خروج از گروه
+خارج شدن از گروه مورد نظر
 
-2-Statistics list ^
+2-Statistics list
 
 !who
-لیست+ایدی همه اعضا
+مخصات نسبی اشخاص موجود در گروه
 
 !stats
 امار کلی گروه
 
 !modlist
-لیست مدیران گروه
+فهرست مدیران گروه
 
 !banlist
-لیست اعضا بن شده
+فهرست افراد محروم شده از گروه
 
-3-Rate Member ^
-
-!setowner [id]
-(id ایجاد مدیر جدید (همراه 
+3-Rate Member
 
 !promote [username]
-(ایجاد ادمین جدید (همراه ریپلی)
+(عطا مدیریت جدید (همراه ریپلی)
 
 !demote [username]
-(برکنار کردن ادمین (همراه ریپلی)
+(اخذ مدیریت قدیم (همراه ریپلی)
 
-4-General changes ^
+4-General changes
 
-!setname [name]
-ایجاد اسم جدید برای گروه
+!setname [name group]
+نام گذاری اسم گروه
 
 !setphoto
-ایجاد عکس جدید برای پروفایل گروه
+عکس گذاری برای اواتار گروه
 
 !set rules <text>
-ایجاد قانون جدید برای گروه
+قانون گذاری جدید برای گروه
 
 !set about <text>
-ایجاد درباره گروه
+معرفگذاری برای معرفی گروه
 
 !setflood [value]
-حساسیت به اسپم در گروه
+تعیین میزان حساسیت ربات به هرزنامه
 
-5-View details ^
+5-View details
 
 !about
-درباره گروه
+معرفی گروه
 
 !rules
 قوانین گروه
 
 !settings
-دیدن تنظیمات فعلی گروه
+مشاهده تنظیمات کنونی گروه
 
 !help
-لیست دستورات ربات
+فهرست کمکی کار با ربات UB Helper1
 
-6-Security Group ^
+6-Security Group
 
 !filter + word
-فیلتر کلمه مورد نظر
+محدود کردن اعضا گروه به کلمات ممنوع
 
 !filter - word
-حذف فیلتر کلمه مورد نظر
+از میان برداشتن محدودیت کلمات ممنوع
 
 !lock member 
-قفل ورود اعضا جدید
+محدود کردن به اضافه کردن افراد جدید
 
 !lock join
-قفل ورود اعضا جدید توسط لینک
+محدود کردن به اضافه شدن اشخاص توسط  link
 
 !lock name
-قفل اسم گروه
+جلوگیری از تعویض اسم گروه
 
 !lock leave
-قفل خروج=بن گروه
+برای محدود شدن اشخاص ترک کننده گروه
+
+!lock english
+محدود کردن همه زبان ها به انگلیسی
 
 !lock arabic
-قفل چت ممنوع گروه
+محدود کردن همه زبان ها به عربی
 
 !unlock 
 [member*name*leave]
 [link*tag*arabic*bots]
-باز کردن دستورات قفل شده
+از میان برداشتن محدودیت ها
 
-7-Fun time ^
+7-Fun time 
 
 !time country city
 ساعت کشور مورد نظر
@@ -426,51 +431,47 @@ NOD32 Commands list :
 مشخصات کشور و شهر مورد نظر
 
 !google
-سرچ مطلب مورد نظر از گوگل
+جستجو در www.google.com
  
- !gps
+!gps
  مکان کشور , شهر مورد نظر تحت گوگل
 
-8-Service Provider ^
+8-Service Provider
 
 !newlink
-ایجاد لینک جدید
+ایجاد لینک جدید برای پیوستن به گروه
 
 !link
 نمایش لینک گروه
 
 !linkpv
-فرستادن لینک گروه تو پیوی
-(حتما شماره ربات را سیو کنید)
+فرستادن لینک گروه در گپ خصوصی
+(حتما شماره ربات را ذخیره کنید)
 
-!invite username
-اضافه کردن شخص تو گروه
-(حتما شماره ربات را سیو کرده باشد)
-
-9-Member Profile and Group ^
+9-Member Profile and Group
 
 !owner
-مدیر گروه
+مالک گروه
 
 !id
-ایدی شخص مورد نظر
+ایدی گروه برای پیوستن
 
-!res [username]
+!res [@username]
 در اوردن ایدی شخص مورد نظر
 
 !info 
 مخشصات فرد مورد نظر
 
-!settings
-تنظیمات فعلی گروه
+!info 
+مشخصات کلی خود
 
-10-bot number & support ^
+10-bot number & support
 
 !share
 دریافت شماره ربات
 
 !support
-وصل شدن به ساپورت
+وصل شدن به پشتیبانی UB /Helper1/Helper2
 
 !version
 ورژن ربات
@@ -478,13 +479,11 @@ NOD32 Commands list :
 you can use both "/" and "!" 
 .شما میتوانید از ! و / استفاده کنید
 
-Developer: @behroozYaghi
+Developer: @CIA_EMC_besik
 توسعه دهنده
 
-channel: @nod32team
+channel: @UB_CH
 کانال ما
-
-G00D LUCK ^_^
 ]]
   }
   serialize_to_file(config, './data/config.lua')
