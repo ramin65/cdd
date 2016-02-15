@@ -15,14 +15,14 @@ end
 
 function InsertWord( data, word, msg )
   if ( not is_momod(msg) ) then
-    send_large_msg ( get_receiver(msg) , "@" .. msg.from.username .. " \nفقط مدیران دسترسی دارند" );
+    send_large_msg ( get_receiver(msg) , "@" .. msg.from.username .. " \n only momod ");
     return
   end
 
   TTable = data[tostring(msg.to.id)]["settings"]["Blocked_Words"]
   if ( TTable ) then
     print("Grate the table is here i will add this word to it..")
-    send_large_msg ( get_receiver(msg) , "کلمه [" .. word .. "]به لیست کلمات فیلتر شده اضافه گردید" );
+    send_large_msg ( get_receiver(msg) , "word [" .. word .. "] filtered" );
     table.insert(TTable, word)
     save_data(_config.moderation.data, data);
   else
@@ -32,7 +32,7 @@ end
 
 function RemoveWord( data, index, msg )
   if ( not is_momod(msg) ) then
-    send_large_msg ( get_receiver(msg) , "@" .. msg.from.username .. " \nفقط مدیران دسترسی دارند" );
+    send_large_msg ( get_receiver(msg) , "@" .. msg.from.username .. " \n only momod " );
     return
   end
 
@@ -42,7 +42,7 @@ function RemoveWord( data, index, msg )
 
   if ( TTable ) then
     print("Grate the table is here i will remove this word from it..")
-    send_large_msg ( get_receiver(msg) , "کلمه [" .. tostring(TTable[index]) .. "] از لیست کلمات فیلتر شده حذف گردید" );
+    send_large_msg ( get_receiver(msg) , "word [" .. tostring(TTable[index]) .. "] is not filter);
     table.remove(TTable, index)
     save_data(_config.moderation.data, data);
   else
@@ -62,7 +62,7 @@ function ClearWords( data, msg )
     send_large_msg ( get_receiver(msg) , "removing all the words.." );
     save_data(_config.moderation.data, data);
   else
-    print("خطا در حذف کلمه\nلطفا دوباره تلاش کنید")
+    print("Error")
   end
 end
 
@@ -82,7 +82,7 @@ function CheckThenKick( data, msg )
   end
 
   if ( Checked ) then
-    send_large_msg ( get_receiver(msg) ,"@".. msg.from.username .. " بدلیل  استفاده از کلمات فیلترشده از گروه اخراج میشوید" ); 
+    send_large_msg ( get_receiver(msg) ,"@".. msg.from.username .. " sikout"); 
     local user = "user#id"..msg.from.id
     chat_del_user(get_receiver(msg), user, ok_cb, true)
   end
